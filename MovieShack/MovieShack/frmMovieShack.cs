@@ -103,7 +103,7 @@ namespace MovieShack
                     }
                     else
                     {
-                        MessageBox.Show("A search term was not entered in either Movie ID or Movie Title fields.", "Error");
+                        MessageBox.Show("A search term was not entered in either Movie ID or Movie Title fields.", "Movie Shack || Error");
                     }
                 }
                 else if (rabSearchCustomer.Checked)
@@ -115,7 +115,7 @@ namespace MovieShack
                     if (txtbSearchCustomerNumber.Text == "" && txtbSearchCustomerID.Text == "")
                     {
                         allValid = false;
-                        MessageBox.Show("A search term was not entered in either Customer Number, Customer Surname or Customer ID fields.", "Error");
+                        MessageBox.Show("A search term was not entered in either Customer Number, Customer Surname or Customer ID fields.", "Movie Shack || Error");
                     }
 
                     //searches for the customer in the file by order of preffered search field &
@@ -127,12 +127,12 @@ namespace MovieShack
                         if (!(validator.valDigitsOnly(arrayDigitsOnlyId)))
                         {
                             allValid = false;
-                            MessageBox.Show("An invalid character that is not a digit was entered into the id search field.", "Error");
+                            MessageBox.Show("An invalid character that is not a digit was entered into the id search field.", "Movie Shack || Error");
                         }
                         else if (!(validator.valIdNo(txtbSearchCustomerID.Text)))
                         {
                             allValid = false;
-                            MessageBox.Show("The ID number search term was not a valid id number", "Error");
+                            MessageBox.Show("The ID number search term was not a valid id number", "Movie Shack || Error");
                         }
 
                         //actually searches for the customer with customer id field
@@ -150,7 +150,7 @@ namespace MovieShack
                         if (!(validator.valDigitsOnly(arrayDigitsOnlyNumber)))
                         {
                             allValid = false;
-                            MessageBox.Show("An invalid character that is not a digit was entered into the customer number search field.", "Error");
+                            MessageBox.Show("An invalid character that is not a digit was entered into the customer number search field.", "Movie Shack || Error");
                         }
 
                         //actually searches for the customer with customer Number field
@@ -181,7 +181,7 @@ namespace MovieShack
             }
             else
             {
-                MessageBox.Show("A selected menu tab was not detected.", "Error");
+                MessageBox.Show("A selected menu tab was not detected.", "Movie Shack || Error");
             }
 
         }
@@ -225,13 +225,13 @@ namespace MovieShack
                                 lbSearchResults.Items.Add(readRecord[i]);
                             }
 
-                            MessageBox.Show("Movie was found. \nYou can now select the Titel and Movie ID right click and copy the details to the rent window if you wish to do so", "MOVIE FOUND");
+                            MessageBox.Show("Movie was found. \nYou can now select the Titel and Movie ID right click and copy the details to the rent window if you wish to do so", "Movie Shack || MOVIE FOUND");
                         }
                         else
                         {
                             txtbSearchMovieID.Clear();
                             txtbSearchMovieTitle.Clear();
-                            MessageBox.Show("The Movie was not found", "MOVIE NOT FOUND");
+                            MessageBox.Show("The Movie was not found", "Movie Shack || MOVIE NOT FOUND");
                         }
 
                     }
@@ -241,19 +241,19 @@ namespace MovieShack
             }
             catch (FileNotFoundException fnfe)
             {
-                MessageBox.Show("Could not find the specified file when searching for a Movie: " + FILE_DIRECTORY_MOVIE_RECORDS + "(" + fnfe.Message + ")");
+                MessageBox.Show("Could not find the specified file when searching for a Movie: " + FILE_DIRECTORY_MOVIE_RECORDS + "(" + fnfe.Message + ")", "Movie Shack || Error");
             }
             catch (InvalidDataException ide)
             {
-                MessageBox.Show("Invalid file format. (" + ide.Message + ")");
+                MessageBox.Show("Invalid file format. (" + ide.Message + ")", "Movie Shack || Error");
             }
             catch (EndOfStreamException eose)
             {
-                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")");
+                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")", "Movie Shack || Error");
             }
             catch (IOException ioe)
             {
-                MessageBox.Show("An Unknown IO Exception Error occured while try to search a movie from this file: " + FILE_DIRECTORY_MOVIE_RECORDS + "(" + ioe.Message + ")", "Error");
+                MessageBox.Show("An Unknown IO Exception Error occured while try to search a movie from this file: " + FILE_DIRECTORY_MOVIE_RECORDS + "(" + ioe.Message + ")", "Movie Shack || Error");
             }
         }
 
@@ -296,13 +296,13 @@ namespace MovieShack
                                 lbSearchResults.Items.Add(readRecord[i]);
                             }
 
-                            MessageBox.Show("Customer was found.\nYou can now select the Customer ID Number right click and copy the details to the rent window if you wish to do so", "CUSTOMER FOUND");
+                            MessageBox.Show("Customer was found.\nYou can now select the Customer ID Number right click and copy the details to the rent window if you wish to do so", "Movie Shack || CUSTOMER FOUND");
                         }
                         else
                         {
                             txtbSearchCustomerID.Clear();
                             txtbSearchCustomerNumber.Clear();
-                            MessageBox.Show("The Customer was not found", "CUSTOMER NOT FOUND");
+                            MessageBox.Show("The Customer was not found", "Movie Shack || CUSTOMER NOT FOUND");
                         }
 
                     }
@@ -312,19 +312,19 @@ namespace MovieShack
             }
             catch (FileNotFoundException fnfe)
             {
-                MessageBox.Show("Could not find the specified file when searching for a customer: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")");
+                MessageBox.Show("Could not find the specified file when searching for a customer: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")", "Movie Shack || Error");
             }
             catch (InvalidDataException ide)
             {
-                MessageBox.Show("Invalid file format. (" + ide.Message + ")");
+                MessageBox.Show("Invalid file format. (" + ide.Message + ")", "Movie Shack || Error");
             }
             catch (EndOfStreamException eose)
             {
-                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")");
+                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")", "Movie Shack || Error");
             }
             catch (IOException ioe)
             {
-                MessageBox.Show("An Unknown IO Exception Error occured while try to search a customer from this file: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Error");
+                MessageBox.Show("An Unknown IO Exception Error occured while try to search a customer from this file: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Movie Shack || Error");
             }
         }
 
@@ -342,7 +342,7 @@ namespace MovieShack
             if (!(validator.valCompleted(arrayAddMovieRequiredFields)))
             {
                 allValid = false;
-                MessageBox.Show("One of the fields was incomplete", "Error");
+                MessageBox.Show("One of the fields was incomplete", "Movie Shack || Error");
             }
 
 
@@ -353,7 +353,7 @@ namespace MovieShack
             if (!(validator.valDigitsOnly(arrayAddMovieDigitsOnlyFields)))
             {
                 allValid = false;
-                MessageBox.Show("The runtime(in minutes) field contains a character that is not a digit.", "Error");
+                MessageBox.Show("The runtime(in minutes) field contains a character that is not a digit.", "Movie Shack || Error");
             }
 
 
@@ -388,7 +388,7 @@ namespace MovieShack
             if (!(validator.valCompleted(arrayAddCustomerRequiredFields)))
             {
                 allValid = false;
-                MessageBox.Show("One of the fields was incomplete", "Error");
+                MessageBox.Show("One of the fields was incomplete", "Movie Shack || Error");
             }
 
             //validates that name and surname only contain letters and spaces
@@ -398,7 +398,7 @@ namespace MovieShack
             if (!(validator.valLettersAndSpace(arrayAddCustomerLettersAndSpacesOnly)))
             {
                 allValid = false;
-                MessageBox.Show("An  Illegal character was detected within name or surname field", "Error");
+                MessageBox.Show("An  Illegal character was detected within name or surname field", "Movie Shack || Error");
             }
 
             //validates the telephone field only contains numbers
@@ -407,12 +407,12 @@ namespace MovieShack
             if (!(validator.valDigitsOnly(arrayAddCustomerDigitsOnlyFields)))
             {
                 allValid = false;
-                MessageBox.Show("The Telephone or ID number field contains an character that is not a digit.", "Error");
+                MessageBox.Show("The Telephone or ID number field contains an character that is not a digit.", "Movie Shack || Error");
             }
             else if (!(validator.valIdNo(txtbAddCustomerIdNo.Text))) //validates the new customers id no
             {
                 allValid = false;
-                MessageBox.Show("The ID number entered is not valid", "Error");
+                MessageBox.Show("The ID number entered is not valid", "Movie Shack || Error");
             }
 
 
@@ -430,17 +430,6 @@ namespace MovieShack
                 txtbAddCustomerIdNo.Clear();
                 txtbAddCustomerAddress.Clear();
             }
-        }
-
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //makes sure color scheme help text for menu item is visible even during highlight
-            if (mnuItemHelp.ForeColor == Color.WhiteSmoke)
-            {
-                mnuItemHelp.ForeColor = Color.Black;
-            }
-            else
-                mnuItemHelp.ForeColor = Color.WhiteSmoke;
         }
 
         private void mnuItemHelpFiles_Click(object sender, EventArgs e)
@@ -485,7 +474,7 @@ namespace MovieShack
             if (!(validator.valCompleted(arrayRequiredFields)))
             {
                 allValid = false;
-                MessageBox.Show("One of the fields was incomplete.", "Error");
+                MessageBox.Show("One of the fields was incomplete.", "Movie Shack || Error");
             }
 
             //validate digits only is used in specific fields and that the customer id number is correct
@@ -494,12 +483,12 @@ namespace MovieShack
             if (!(validator.valDigitsOnly(arrayDigitOnlyFields)))
             {
                 allValid = false;
-                MessageBox.Show("Non digit characters where used in the price or customer id fields.", "Error");
+                MessageBox.Show("Non digit characters where used in the price or customer id fields.", "Movie Shack || Error");
             }
             else if (!(validator.valIdNo(txtbRentMovieCustId.Text)))
             {
                 allValid = false;
-                MessageBox.Show("The Customer ID provided is not valid", "Error");
+                MessageBox.Show("The Customer ID provided is not valid", "Movie Shack || Error");
             }
             else if (searchCustomerId(txtbRentMovieCustId.Text))
             {
@@ -518,7 +507,7 @@ namespace MovieShack
                 }
             }
             else
-                MessageBox.Show("The Customer ID was not found, Try search them first.", "Error");
+                MessageBox.Show("The Customer ID was not found, Try search them first.", "Movie Shack || Error");
         }
 
         private void calcTotalRentalPrice()
@@ -579,19 +568,19 @@ namespace MovieShack
             }
             catch (FileNotFoundException fnfe)
             {
-                MessageBox.Show("Could not find the specified file when searching for a customer: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")");
+                MessageBox.Show("Could not find the specified file when searching for a customer: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")", "Movie Shack || Error");
             }
             catch (InvalidDataException ide)
             {
-                MessageBox.Show("Invalid file format. (" + ide.Message + ")");
+                MessageBox.Show("Invalid file format. (" + ide.Message + ")", "Movie Shack || Error");
             }
             catch (EndOfStreamException eose)
             {
-                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")");
+                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")", "Movie Shack || Error");
             }
             catch (IOException ioe)
             {
-                MessageBox.Show("An Unknown IO Exception Error occured while try to search a customer from this file: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Error");
+                MessageBox.Show("An Unknown IO Exception Error occured while try to search a customer from this file: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Movie Shack || Error");
             }
 
             return found;
@@ -617,7 +606,7 @@ namespace MovieShack
             }
             else
             {
-                MessageBox.Show("A selection on the movie to rent list was not made.", "Error");
+                MessageBox.Show("A selection on the movie to rent list was not made.", "Movie Shack || Error");
             }
         }
 
@@ -681,19 +670,19 @@ namespace MovieShack
             }
             catch (FileNotFoundException fnfe)
             {
-                MessageBox.Show("Could not find the specified file when reading a movie record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")");
+                MessageBox.Show("Could not find the specified file when reading a movie record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")", "Movie Shack || Error");
             }
             catch (InvalidDataException ide)
             {
-                MessageBox.Show("Invalid file format. (" + ide.Message + ")");
+                MessageBox.Show("Invalid file format. (" + ide.Message + ")", "Movie Shack || Error");
             }
             catch (EndOfStreamException eose)
             {
-                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")");
+                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")", "Movie Shack || Error");
             }
             catch (IOException ioe)
             {
-                MessageBox.Show("An Unknown IO Exception Error occured while trying to reading a movie record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Error");
+                MessageBox.Show("An Unknown IO Exception Error occured while trying to reading a movie record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Movie Shack || Error");
             }
 
             //Opens the file in text editor for viewing and additional saving
@@ -750,7 +739,7 @@ namespace MovieShack
             }
             catch (FileNotFoundException fnfe)
             {
-                MessageBox.Show("Could not find the specified file when reading a customer record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")");
+                MessageBox.Show("Could not find the specified file when reading a customer record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")", "Movie Shack || Error");
             }
             catch (InvalidDataException ide)
             {
@@ -762,7 +751,7 @@ namespace MovieShack
             }
             catch (IOException ioe)
             {
-                MessageBox.Show("An Unknown IO Exception Error occured while trying to reading a customer record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Error");
+                MessageBox.Show("An Unknown IO Exception Error occured while trying to reading a customer record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Movie Shack || Error");
             }
 
             //Opens the file in text editor for viewing and additional saving
@@ -824,19 +813,19 @@ namespace MovieShack
             }
             catch (FileNotFoundException fnfe)
             {
-                MessageBox.Show("Could not find the specified file when reading a rental record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")");
+                MessageBox.Show("Could not find the specified file when reading a rental record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")", "Movie Shack || Error");
             }
             catch (InvalidDataException ide)
             {
-                MessageBox.Show("Invalid file format. (" + ide.Message + ")");
+                MessageBox.Show("Invalid file format. (" + ide.Message + ")", "Movie Shack || Error");
             }
             catch (EndOfStreamException eose)
             {
-                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")");
+                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")", "Movie Shack || Error");
             }
             catch (IOException ioe)
             {
-                MessageBox.Show("An Unknown IO Exception Error occured while trying to reading a rental record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Error");
+                MessageBox.Show("An Unknown IO Exception Error occured while trying to reading a rental record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Movie Shack || Error");
             }
 
             //Opens the file in text editor for viewing and additional saving
@@ -900,19 +889,19 @@ namespace MovieShack
             }
             catch (FileNotFoundException fnfe)
             {
-                MessageBox.Show("Could not find the specified file when reading a movie record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")");
+                MessageBox.Show("Could not find the specified file when reading a movie record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + fnfe.Message + ")", "Movie Shack || Error");
             }
             catch (InvalidDataException ide)
             {
-                MessageBox.Show("Invalid file format. (" + ide.Message + ")");
+                MessageBox.Show("Invalid file format. (" + ide.Message + ")", "Movie Shack || Error");
             }
             catch (EndOfStreamException eose)
             {
-                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")");
+                MessageBox.Show("Unexpected end of file. (" + eose.Message + ")", "Movie Shack || Error");
             }
             catch (IOException ioe)
             {
-                MessageBox.Show("An Unknown IO Exception Error occured while trying to reading a movie record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Error");
+                MessageBox.Show("An Unknown IO Exception Error occured while trying to reading a movie record for a report: " + FILE_DIRECTORY_CUSTOMER_RECORDS + "(" + ioe.Message + ")", "Movie Shack || Error");
             }
 
             //Opens the file in text editor for viewing and additional saving
@@ -922,17 +911,6 @@ namespace MovieShack
         private void mnuItemExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void mnuItemFile_Click(object sender, EventArgs e)
-        {
-            //makes sure color scheme File text for menu item is visible even during highlight
-            if (mnuItemFile.ForeColor == Color.WhiteSmoke)
-            {
-                mnuItemFile.ForeColor = Color.Black;
-            }
-            else
-                mnuItemFile.ForeColor = Color.WhiteSmoke;
         }
 
         private void copyToRentFieldsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -952,7 +930,7 @@ namespace MovieShack
                 }
                 else
                 {
-                    MessageBox.Show("The Copy function is not supported for your selection because a simillar field does not exist in the rent window.", "Error");
+                    MessageBox.Show("The Copy function is not supported for your selection because a simillar field does not exist in the rent window.", "Movie Shack || Error");
                 }
             }
             else if (rabSearchCustomer.Checked)
@@ -963,7 +941,7 @@ namespace MovieShack
                 }
                 else
                 {
-                    MessageBox.Show("The Copy function is not supported for your selection because a simillar field does not exist in the rent window.", "Error");
+                    MessageBox.Show("The Copy function is not supported for your selection because a simillar field does not exist in the rent window.", "Movie Shack || Error");
                 }
             }
         }
@@ -979,5 +957,43 @@ namespace MovieShack
             }
 
         }
+
+        private void mnuItemFile_MouseLeave(object sender, EventArgs e)
+        {
+            //Ensures colour changes to white and says white when user unfocuses the menu perhaps to another menu
+            mnuItemFile.ForeColor = Color.WhiteSmoke;
+        }
+
+        private void mnuItemFile_MouseEnter(object sender, EventArgs e)
+        {
+            //Enusres if user focuses menu again after mouse over to another menu the color is black
+            mnuItemFile.ForeColor = Color.Black;
+        }
+
+        private void mnuItemReports_MouseLeave(object sender, EventArgs e)
+        {
+            //Ensures colour changes to white and says white when user unfocuses the menu perhaps to another menu
+            mnuItemReports.ForeColor = Color.WhiteSmoke;
+        }
+
+        private void mnuItemReports_MouseEnter(object sender, EventArgs e)
+        {
+            //Enusres if user focuses menu again after mouse over to another menu the color is black
+            mnuItemReports.ForeColor = Color.Black;
+        }
+
+        private void mnuItemHelp_MouseLeave(object sender, EventArgs e)
+        {
+            //Ensures colour changes to white and says white when user unfocuses the menu perhaps to another menu
+            mnuItemHelp.ForeColor = Color.WhiteSmoke;
+        }
+
+        private void mnuItemHelp_MouseEnter(object sender, EventArgs e)
+        {
+            //Enusres if user focuses menu again after mouse over to another menu the color is black
+            mnuItemHelp.ForeColor = Color.Black;
+        }
+
+
     }
 }

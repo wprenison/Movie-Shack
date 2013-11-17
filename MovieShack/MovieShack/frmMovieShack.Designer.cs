@@ -58,14 +58,14 @@
             this.lbSearchResults = new System.Windows.Forms.ListBox();
             this.cmsListBoxCopy = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToRentFieldsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grpbSearchSearch = new System.Windows.Forms.GroupBox();
+            this.rabSearchCustomer = new System.Windows.Forms.RadioButton();
+            this.rabSearchMovie = new System.Windows.Forms.RadioButton();
             this.pnlSearchMovie = new System.Windows.Forms.Panel();
             this.lblSearchMovieTitle = new System.Windows.Forms.Label();
             this.txtbSearchMovieTitle = new System.Windows.Forms.TextBox();
             this.txtbSearchMovieID = new System.Windows.Forms.TextBox();
             this.lblSearchMovieId = new System.Windows.Forms.Label();
-            this.grpbSearchSearch = new System.Windows.Forms.GroupBox();
-            this.rabSearchCustomer = new System.Windows.Forms.RadioButton();
-            this.rabSearchMovie = new System.Windows.Forms.RadioButton();
             this.pnlSearchCustomer = new System.Windows.Forms.Panel();
             this.lblSearchCustomerNumber = new System.Windows.Forms.Label();
             this.txtbSearchCustomerNumber = new System.Windows.Forms.TextBox();
@@ -87,6 +87,9 @@
             this.cmbMovieCategory = new System.Windows.Forms.ComboBox();
             this.txtbAddMovieTitle = new System.Windows.Forms.TextBox();
             this.lblAddMovieTitle = new System.Windows.Forms.Label();
+            this.grpbAddWhatToAdd = new System.Windows.Forms.GroupBox();
+            this.rabAddCustomer = new System.Windows.Forms.RadioButton();
+            this.rabAddMovie = new System.Windows.Forms.RadioButton();
             this.pnlAddCustomer = new System.Windows.Forms.Panel();
             this.lblAddCustomerIdNo = new System.Windows.Forms.Label();
             this.txtbAddCustomerIdNo = new System.Windows.Forms.TextBox();
@@ -98,12 +101,14 @@
             this.lblAddCustomerSurname = new System.Windows.Forms.Label();
             this.txtbAddCustomerName = new System.Windows.Forms.TextBox();
             this.lblAddCustomerName = new System.Windows.Forms.Label();
-            this.grpbAddWhatToAdd = new System.Windows.Forms.GroupBox();
-            this.rabAddCustomer = new System.Windows.Forms.RadioButton();
-            this.rabAddMovie = new System.Windows.Forms.RadioButton();
             this.mnuStripMovieShack = new System.Windows.Forms.MenuStrip();
             this.mnuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemReports = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemCategoryReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemRevenueReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemLatestReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemCustomerReport = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemHelpFiles = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,15 +125,15 @@
             this.tpgRent.SuspendLayout();
             this.tpgSearch.SuspendLayout();
             this.cmsListBoxCopy.SuspendLayout();
-            this.pnlSearchMovie.SuspendLayout();
             this.grpbSearchSearch.SuspendLayout();
+            this.pnlSearchMovie.SuspendLayout();
             this.pnlSearchCustomer.SuspendLayout();
             this.tpgReports.SuspendLayout();
             this.grpbReportSelection.SuspendLayout();
             this.tpgAddNew.SuspendLayout();
             this.pnlAddMovie.SuspendLayout();
-            this.pnlAddCustomer.SuspendLayout();
             this.grpbAddWhatToAdd.SuspendLayout();
+            this.pnlAddCustomer.SuspendLayout();
             this.mnuStripMovieShack.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,9 +188,11 @@
             // lblRentPrice
             // 
             this.lblRentPrice.AutoSize = true;
+            this.lblRentPrice.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRentPrice.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblRentPrice.Location = new System.Drawing.Point(399, 0);
             this.lblRentPrice.Name = "lblRentPrice";
-            this.lblRentPrice.Size = new System.Drawing.Size(48, 23);
+            this.lblRentPrice.Size = new System.Drawing.Size(55, 26);
             this.lblRentPrice.TabIndex = 17;
             this.lblRentPrice.Text = "Price:";
             // 
@@ -226,6 +233,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(9, 121);
             this.label1.Name = "label1";
@@ -269,10 +277,11 @@
             // lblRentMovieMoviesToRent
             // 
             this.lblRentMovieMoviesToRent.AutoSize = true;
+            this.lblRentMovieMoviesToRent.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentMovieMoviesToRent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblRentMovieMoviesToRent.Location = new System.Drawing.Point(247, 0);
             this.lblRentMovieMoviesToRent.Name = "lblRentMovieMoviesToRent";
-            this.lblRentMovieMoviesToRent.Size = new System.Drawing.Size(114, 23);
+            this.lblRentMovieMoviesToRent.Size = new System.Drawing.Size(113, 23);
             this.lblRentMovieMoviesToRent.TabIndex = 9;
             this.lblRentMovieMoviesToRent.Text = "Movies To Rent:";
             // 
@@ -281,7 +290,7 @@
             this.lblRentTotal.AutoSize = true;
             this.lblRentTotal.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentTotal.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblRentTotal.Location = new System.Drawing.Point(348, 151);
+            this.lblRentTotal.Location = new System.Drawing.Point(348, 196);
             this.lblRentTotal.Name = "lblRentTotal";
             this.lblRentTotal.Size = new System.Drawing.Size(48, 23);
             this.lblRentTotal.TabIndex = 8;
@@ -291,7 +300,7 @@
             // 
             this.txtbRentTotalPrice.Enabled = false;
             this.txtbRentTotalPrice.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbRentTotalPrice.Location = new System.Drawing.Point(402, 151);
+            this.txtbRentTotalPrice.Location = new System.Drawing.Point(402, 196);
             this.txtbRentTotalPrice.MinimumSize = new System.Drawing.Size(4, 20);
             this.txtbRentTotalPrice.Name = "txtbRentTotalPrice";
             this.txtbRentTotalPrice.Size = new System.Drawing.Size(43, 27);
@@ -318,10 +327,11 @@
             // lblRentMovieCustId
             // 
             this.lblRentMovieCustId.AutoSize = true;
+            this.lblRentMovieCustId.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentMovieCustId.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblRentMovieCustId.Location = new System.Drawing.Point(9, 90);
             this.lblRentMovieCustId.Name = "lblRentMovieCustId";
-            this.lblRentMovieCustId.Size = new System.Drawing.Size(96, 23);
+            this.lblRentMovieCustId.Size = new System.Drawing.Size(95, 23);
             this.lblRentMovieCustId.TabIndex = 4;
             this.lblRentMovieCustId.Text = "Customer ID:";
             // 
@@ -346,6 +356,7 @@
             // lblRentMovieTitle
             // 
             this.lblRentMovieTitle.AutoSize = true;
+            this.lblRentMovieTitle.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentMovieTitle.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblRentMovieTitle.Location = new System.Drawing.Point(9, 57);
             this.lblRentMovieTitle.Name = "lblRentMovieTitle";
@@ -356,6 +367,7 @@
             // lblRentMovieId
             // 
             this.lblRentMovieId.AutoSize = true;
+            this.lblRentMovieId.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentMovieId.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblRentMovieId.Location = new System.Drawing.Point(9, 22);
             this.lblRentMovieId.Name = "lblRentMovieId";
@@ -370,8 +382,8 @@
             this.tpgSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tpgSearch.Controls.Add(this.lblSearchResults);
             this.tpgSearch.Controls.Add(this.lbSearchResults);
-            this.tpgSearch.Controls.Add(this.pnlSearchMovie);
             this.tpgSearch.Controls.Add(this.grpbSearchSearch);
+            this.tpgSearch.Controls.Add(this.pnlSearchMovie);
             this.tpgSearch.Controls.Add(this.pnlSearchCustomer);
             this.tpgSearch.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold);
             this.tpgSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -386,6 +398,7 @@
             // lblSearchResults
             // 
             this.lblSearchResults.AutoSize = true;
+            this.lblSearchResults.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchResults.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblSearchResults.Location = new System.Drawing.Point(235, 48);
             this.lblSearchResults.Name = "lblSearchResults";
@@ -418,56 +431,12 @@
             this.copyToRentFieldsToolStripMenuItem.Text = "Copy To Rent Fields";
             this.copyToRentFieldsToolStripMenuItem.Click += new System.EventHandler(this.copyToRentFieldsToolStripMenuItem_Click);
             // 
-            // pnlSearchMovie
-            // 
-            this.pnlSearchMovie.Controls.Add(this.lblSearchMovieTitle);
-            this.pnlSearchMovie.Controls.Add(this.txtbSearchMovieTitle);
-            this.pnlSearchMovie.Controls.Add(this.txtbSearchMovieID);
-            this.pnlSearchMovie.Controls.Add(this.lblSearchMovieId);
-            this.pnlSearchMovie.Location = new System.Drawing.Point(16, 59);
-            this.pnlSearchMovie.Name = "pnlSearchMovie";
-            this.pnlSearchMovie.Size = new System.Drawing.Size(211, 108);
-            this.pnlSearchMovie.TabIndex = 1;
-            // 
-            // lblSearchMovieTitle
-            // 
-            this.lblSearchMovieTitle.AutoSize = true;
-            this.lblSearchMovieTitle.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSearchMovieTitle.Location = new System.Drawing.Point(3, 61);
-            this.lblSearchMovieTitle.Name = "lblSearchMovieTitle";
-            this.lblSearchMovieTitle.Size = new System.Drawing.Size(86, 23);
-            this.lblSearchMovieTitle.TabIndex = 3;
-            this.lblSearchMovieTitle.Text = "Movie Title:";
-            // 
-            // txtbSearchMovieTitle
-            // 
-            this.txtbSearchMovieTitle.Location = new System.Drawing.Point(93, 58);
-            this.txtbSearchMovieTitle.Name = "txtbSearchMovieTitle";
-            this.txtbSearchMovieTitle.Size = new System.Drawing.Size(100, 30);
-            this.txtbSearchMovieTitle.TabIndex = 2;
-            // 
-            // txtbSearchMovieID
-            // 
-            this.txtbSearchMovieID.Location = new System.Drawing.Point(93, 25);
-            this.txtbSearchMovieID.Name = "txtbSearchMovieID";
-            this.txtbSearchMovieID.Size = new System.Drawing.Size(100, 30);
-            this.txtbSearchMovieID.TabIndex = 1;
-            // 
-            // lblSearchMovieId
-            // 
-            this.lblSearchMovieId.AutoSize = true;
-            this.lblSearchMovieId.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSearchMovieId.Location = new System.Drawing.Point(3, 28);
-            this.lblSearchMovieId.Name = "lblSearchMovieId";
-            this.lblSearchMovieId.Size = new System.Drawing.Size(70, 23);
-            this.lblSearchMovieId.TabIndex = 0;
-            this.lblSearchMovieId.Text = "Movie ID:";
-            // 
             // grpbSearchSearch
             // 
             this.grpbSearchSearch.Controls.Add(this.rabSearchCustomer);
             this.grpbSearchSearch.Controls.Add(this.rabSearchMovie);
             this.grpbSearchSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpbSearchSearch.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbSearchSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.grpbSearchSearch.Location = new System.Drawing.Point(3, 3);
             this.grpbSearchSearch.Name = "grpbSearchSearch";
@@ -479,6 +448,7 @@
             // rabSearchCustomer
             // 
             this.rabSearchCustomer.AutoSize = true;
+            this.rabSearchCustomer.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rabSearchCustomer.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.rabSearchCustomer.Location = new System.Drawing.Point(71, 21);
             this.rabSearchCustomer.Name = "rabSearchCustomer";
@@ -491,6 +461,7 @@
             // 
             this.rabSearchMovie.AutoSize = true;
             this.rabSearchMovie.Checked = true;
+            this.rabSearchMovie.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rabSearchMovie.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.rabSearchMovie.Location = new System.Drawing.Point(7, 21);
             this.rabSearchMovie.Name = "rabSearchMovie";
@@ -500,6 +471,53 @@
             this.rabSearchMovie.Text = "Movie";
             this.rabSearchMovie.UseVisualStyleBackColor = true;
             this.rabSearchMovie.CheckedChanged += new System.EventHandler(this.rabSearchMovie_CheckedChanged);
+            // 
+            // pnlSearchMovie
+            // 
+            this.pnlSearchMovie.Controls.Add(this.lblSearchMovieTitle);
+            this.pnlSearchMovie.Controls.Add(this.txtbSearchMovieTitle);
+            this.pnlSearchMovie.Controls.Add(this.txtbSearchMovieID);
+            this.pnlSearchMovie.Controls.Add(this.lblSearchMovieId);
+            this.pnlSearchMovie.Location = new System.Drawing.Point(6, 59);
+            this.pnlSearchMovie.Name = "pnlSearchMovie";
+            this.pnlSearchMovie.Size = new System.Drawing.Size(221, 108);
+            this.pnlSearchMovie.TabIndex = 1;
+            // 
+            // lblSearchMovieTitle
+            // 
+            this.lblSearchMovieTitle.AutoSize = true;
+            this.lblSearchMovieTitle.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchMovieTitle.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblSearchMovieTitle.Location = new System.Drawing.Point(13, 61);
+            this.lblSearchMovieTitle.Name = "lblSearchMovieTitle";
+            this.lblSearchMovieTitle.Size = new System.Drawing.Size(86, 23);
+            this.lblSearchMovieTitle.TabIndex = 3;
+            this.lblSearchMovieTitle.Text = "Movie Title:";
+            // 
+            // txtbSearchMovieTitle
+            // 
+            this.txtbSearchMovieTitle.Location = new System.Drawing.Point(102, 58);
+            this.txtbSearchMovieTitle.Name = "txtbSearchMovieTitle";
+            this.txtbSearchMovieTitle.Size = new System.Drawing.Size(100, 30);
+            this.txtbSearchMovieTitle.TabIndex = 2;
+            // 
+            // txtbSearchMovieID
+            // 
+            this.txtbSearchMovieID.Location = new System.Drawing.Point(102, 25);
+            this.txtbSearchMovieID.Name = "txtbSearchMovieID";
+            this.txtbSearchMovieID.Size = new System.Drawing.Size(100, 30);
+            this.txtbSearchMovieID.TabIndex = 1;
+            // 
+            // lblSearchMovieId
+            // 
+            this.lblSearchMovieId.AutoSize = true;
+            this.lblSearchMovieId.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchMovieId.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblSearchMovieId.Location = new System.Drawing.Point(13, 28);
+            this.lblSearchMovieId.Name = "lblSearchMovieId";
+            this.lblSearchMovieId.Size = new System.Drawing.Size(70, 23);
+            this.lblSearchMovieId.TabIndex = 0;
+            this.lblSearchMovieId.Text = "Movie ID:";
             // 
             // pnlSearchCustomer
             // 
@@ -628,8 +646,8 @@
             this.tpgAddNew.BackgroundImage = global::MovieShack.Properties.Resources.MovieShackBG;
             this.tpgAddNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tpgAddNew.Controls.Add(this.pnlAddMovie);
-            this.tpgAddNew.Controls.Add(this.pnlAddCustomer);
             this.tpgAddNew.Controls.Add(this.grpbAddWhatToAdd);
+            this.tpgAddNew.Controls.Add(this.pnlAddCustomer);
             this.tpgAddNew.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.tpgAddNew.Location = new System.Drawing.Point(4, 32);
             this.tpgAddNew.Name = "tpgAddNew";
@@ -656,6 +674,7 @@
             // lblAddMovieId
             // 
             this.lblAddMovieId.AutoSize = true;
+            this.lblAddMovieId.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddMovieId.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblAddMovieId.Location = new System.Drawing.Point(7, 50);
             this.lblAddMovieId.Name = "lblAddMovieId";
@@ -673,6 +692,7 @@
             // lblAddMovieRuntime
             // 
             this.lblAddMovieRuntime.AutoSize = true;
+            this.lblAddMovieRuntime.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddMovieRuntime.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblAddMovieRuntime.Location = new System.Drawing.Point(7, 123);
             this.lblAddMovieRuntime.Name = "lblAddMovieRuntime";
@@ -690,6 +710,7 @@
             // lblAddMovieCategory
             // 
             this.lblAddMovieCategory.AutoSize = true;
+            this.lblAddMovieCategory.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddMovieCategory.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblAddMovieCategory.Location = new System.Drawing.Point(7, 86);
             this.lblAddMovieCategory.Name = "lblAddMovieCategory";
@@ -724,12 +745,55 @@
             // lblAddMovieTitle
             // 
             this.lblAddMovieTitle.AutoSize = true;
+            this.lblAddMovieTitle.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddMovieTitle.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblAddMovieTitle.Location = new System.Drawing.Point(7, 14);
             this.lblAddMovieTitle.Name = "lblAddMovieTitle";
             this.lblAddMovieTitle.Size = new System.Drawing.Size(86, 23);
             this.lblAddMovieTitle.TabIndex = 0;
             this.lblAddMovieTitle.Text = "Movie Title:";
+            // 
+            // grpbAddWhatToAdd
+            // 
+            this.grpbAddWhatToAdd.Controls.Add(this.rabAddCustomer);
+            this.grpbAddWhatToAdd.Controls.Add(this.rabAddMovie);
+            this.grpbAddWhatToAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpbAddWhatToAdd.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbAddWhatToAdd.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.grpbAddWhatToAdd.Location = new System.Drawing.Point(0, 0);
+            this.grpbAddWhatToAdd.Name = "grpbAddWhatToAdd";
+            this.grpbAddWhatToAdd.Size = new System.Drawing.Size(456, 45);
+            this.grpbAddWhatToAdd.TabIndex = 1;
+            this.grpbAddWhatToAdd.TabStop = false;
+            this.grpbAddWhatToAdd.Text = "What To Add:";
+            this.ttipAddNewTab.SetToolTip(this.grpbAddWhatToAdd, "This tab allows you to add new movies or customers to the system");
+            // 
+            // rabAddCustomer
+            // 
+            this.rabAddCustomer.AutoSize = true;
+            this.rabAddCustomer.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rabAddCustomer.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rabAddCustomer.Location = new System.Drawing.Point(71, 19);
+            this.rabAddCustomer.Name = "rabAddCustomer";
+            this.rabAddCustomer.Size = new System.Drawing.Size(90, 27);
+            this.rabAddCustomer.TabIndex = 2;
+            this.rabAddCustomer.Text = "Customer";
+            this.rabAddCustomer.UseVisualStyleBackColor = true;
+            // 
+            // rabAddMovie
+            // 
+            this.rabAddMovie.AutoSize = true;
+            this.rabAddMovie.Checked = true;
+            this.rabAddMovie.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rabAddMovie.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rabAddMovie.Location = new System.Drawing.Point(7, 19);
+            this.rabAddMovie.Name = "rabAddMovie";
+            this.rabAddMovie.Size = new System.Drawing.Size(65, 27);
+            this.rabAddMovie.TabIndex = 1;
+            this.rabAddMovie.TabStop = true;
+            this.rabAddMovie.Text = "Movie";
+            this.rabAddMovie.UseVisualStyleBackColor = true;
+            this.rabAddMovie.CheckedChanged += new System.EventHandler(this.rabAddMovie_CheckedChanged);
             // 
             // pnlAddCustomer
             // 
@@ -830,45 +894,6 @@
             this.lblAddCustomerName.TabIndex = 0;
             this.lblAddCustomerName.Text = "Customer Name:";
             // 
-            // grpbAddWhatToAdd
-            // 
-            this.grpbAddWhatToAdd.Controls.Add(this.rabAddCustomer);
-            this.grpbAddWhatToAdd.Controls.Add(this.rabAddMovie);
-            this.grpbAddWhatToAdd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpbAddWhatToAdd.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.grpbAddWhatToAdd.Location = new System.Drawing.Point(0, 0);
-            this.grpbAddWhatToAdd.Name = "grpbAddWhatToAdd";
-            this.grpbAddWhatToAdd.Size = new System.Drawing.Size(456, 45);
-            this.grpbAddWhatToAdd.TabIndex = 1;
-            this.grpbAddWhatToAdd.TabStop = false;
-            this.grpbAddWhatToAdd.Text = "What To Add:";
-            this.ttipAddNewTab.SetToolTip(this.grpbAddWhatToAdd, "This tab allows you to add new movies or customers to the system");
-            // 
-            // rabAddCustomer
-            // 
-            this.rabAddCustomer.AutoSize = true;
-            this.rabAddCustomer.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.rabAddCustomer.Location = new System.Drawing.Point(71, 19);
-            this.rabAddCustomer.Name = "rabAddCustomer";
-            this.rabAddCustomer.Size = new System.Drawing.Size(90, 27);
-            this.rabAddCustomer.TabIndex = 2;
-            this.rabAddCustomer.Text = "Customer";
-            this.rabAddCustomer.UseVisualStyleBackColor = true;
-            // 
-            // rabAddMovie
-            // 
-            this.rabAddMovie.AutoSize = true;
-            this.rabAddMovie.Checked = true;
-            this.rabAddMovie.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.rabAddMovie.Location = new System.Drawing.Point(7, 19);
-            this.rabAddMovie.Name = "rabAddMovie";
-            this.rabAddMovie.Size = new System.Drawing.Size(65, 27);
-            this.rabAddMovie.TabIndex = 1;
-            this.rabAddMovie.TabStop = true;
-            this.rabAddMovie.Text = "Movie";
-            this.rabAddMovie.UseVisualStyleBackColor = true;
-            this.rabAddMovie.CheckedChanged += new System.EventHandler(this.rabAddMovie_CheckedChanged);
-            // 
             // mnuStripMovieShack
             // 
             this.mnuStripMovieShack.BackColor = System.Drawing.Color.Transparent;
@@ -876,6 +901,7 @@
             this.mnuStripMovieShack.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuStripMovieShack.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItemFile,
+            this.mnuItemReports,
             this.mnuItemHelp});
             this.mnuStripMovieShack.Location = new System.Drawing.Point(0, 0);
             this.mnuStripMovieShack.Name = "mnuStripMovieShack";
@@ -891,7 +917,8 @@
             this.mnuItemFile.Name = "mnuItemFile";
             this.mnuItemFile.Size = new System.Drawing.Size(41, 25);
             this.mnuItemFile.Text = "File";
-            this.mnuItemFile.Click += new System.EventHandler(this.mnuItemFile_Click);
+            this.mnuItemFile.MouseEnter += new System.EventHandler(this.mnuItemFile_MouseEnter);
+            this.mnuItemFile.MouseLeave += new System.EventHandler(this.mnuItemFile_MouseLeave);
             // 
             // mnuItemExit
             // 
@@ -899,6 +926,48 @@
             this.mnuItemExit.Size = new System.Drawing.Size(103, 26);
             this.mnuItemExit.Text = "Exit";
             this.mnuItemExit.Click += new System.EventHandler(this.mnuItemExit_Click);
+            // 
+            // mnuItemReports
+            // 
+            this.mnuItemReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuItemCategoryReport,
+            this.mnuItemRevenueReport,
+            this.mnuItemLatestReport,
+            this.mnuItemCustomerReport});
+            this.mnuItemReports.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.mnuItemReports.Name = "mnuItemReports";
+            this.mnuItemReports.Size = new System.Drawing.Size(69, 25);
+            this.mnuItemReports.Text = "Reports";
+            this.mnuItemReports.MouseEnter += new System.EventHandler(this.mnuItemReports_MouseEnter);
+            this.mnuItemReports.MouseLeave += new System.EventHandler(this.mnuItemReports_MouseLeave);
+            // 
+            // mnuItemCategoryReport
+            // 
+            this.mnuItemCategoryReport.Name = "mnuItemCategoryReport";
+            this.mnuItemCategoryReport.Size = new System.Drawing.Size(184, 26);
+            this.mnuItemCategoryReport.Text = "Category Report";
+            this.mnuItemCategoryReport.Click += new System.EventHandler(this.btnReportCategory_Click);
+            // 
+            // mnuItemRevenueReport
+            // 
+            this.mnuItemRevenueReport.Name = "mnuItemRevenueReport";
+            this.mnuItemRevenueReport.Size = new System.Drawing.Size(184, 26);
+            this.mnuItemRevenueReport.Text = "Revenue Report";
+            this.mnuItemRevenueReport.Click += new System.EventHandler(this.btnReportTotalRevenue_Click);
+            // 
+            // mnuItemLatestReport
+            // 
+            this.mnuItemLatestReport.Name = "mnuItemLatestReport";
+            this.mnuItemLatestReport.Size = new System.Drawing.Size(184, 26);
+            this.mnuItemLatestReport.Text = "Latest Report";
+            this.mnuItemLatestReport.Click += new System.EventHandler(this.btnReportLatest_Click);
+            // 
+            // mnuItemCustomerReport
+            // 
+            this.mnuItemCustomerReport.Name = "mnuItemCustomerReport";
+            this.mnuItemCustomerReport.Size = new System.Drawing.Size(184, 26);
+            this.mnuItemCustomerReport.Text = "Customer Report";
+            this.mnuItemCustomerReport.Click += new System.EventHandler(this.btnReportCustomers_Click);
             // 
             // mnuItemHelp
             // 
@@ -910,19 +979,20 @@
             this.mnuItemHelp.Name = "mnuItemHelp";
             this.mnuItemHelp.Size = new System.Drawing.Size(49, 25);
             this.mnuItemHelp.Text = "Help";
-            this.mnuItemHelp.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            this.mnuItemHelp.MouseEnter += new System.EventHandler(this.mnuItemHelp_MouseEnter);
+            this.mnuItemHelp.MouseLeave += new System.EventHandler(this.mnuItemHelp_MouseLeave);
             // 
             // mnuItemHelpFiles
             // 
             this.mnuItemHelpFiles.Name = "mnuItemHelpFiles";
-            this.mnuItemHelpFiles.Size = new System.Drawing.Size(136, 26);
+            this.mnuItemHelpFiles.Size = new System.Drawing.Size(152, 26);
             this.mnuItemHelpFiles.Text = "Help Files";
             this.mnuItemHelpFiles.Click += new System.EventHandler(this.mnuItemHelpFiles_Click);
             // 
             // mnuItemAbout
             // 
             this.mnuItemAbout.Name = "mnuItemAbout";
-            this.mnuItemAbout.Size = new System.Drawing.Size(136, 26);
+            this.mnuItemAbout.Size = new System.Drawing.Size(152, 26);
             this.mnuItemAbout.Text = "About";
             this.mnuItemAbout.Click += new System.EventHandler(this.mnuItemAbout_Click);
             // 
@@ -998,10 +1068,10 @@
             this.tpgSearch.ResumeLayout(false);
             this.tpgSearch.PerformLayout();
             this.cmsListBoxCopy.ResumeLayout(false);
-            this.pnlSearchMovie.ResumeLayout(false);
-            this.pnlSearchMovie.PerformLayout();
             this.grpbSearchSearch.ResumeLayout(false);
             this.grpbSearchSearch.PerformLayout();
+            this.pnlSearchMovie.ResumeLayout(false);
+            this.pnlSearchMovie.PerformLayout();
             this.pnlSearchCustomer.ResumeLayout(false);
             this.pnlSearchCustomer.PerformLayout();
             this.tpgReports.ResumeLayout(false);
@@ -1009,10 +1079,10 @@
             this.tpgAddNew.ResumeLayout(false);
             this.pnlAddMovie.ResumeLayout(false);
             this.pnlAddMovie.PerformLayout();
-            this.pnlAddCustomer.ResumeLayout(false);
-            this.pnlAddCustomer.PerformLayout();
             this.grpbAddWhatToAdd.ResumeLayout(false);
             this.grpbAddWhatToAdd.PerformLayout();
+            this.pnlAddCustomer.ResumeLayout(false);
+            this.pnlAddCustomer.PerformLayout();
             this.mnuStripMovieShack.ResumeLayout(false);
             this.mnuStripMovieShack.PerformLayout();
             this.ResumeLayout(false);
@@ -1108,6 +1178,11 @@
         private System.Windows.Forms.Label lblRentPrice;
         private System.Windows.Forms.ContextMenuStrip cmsListBoxCopy;
         private System.Windows.Forms.ToolStripMenuItem copyToRentFieldsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemReports;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemCategoryReport;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemRevenueReport;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemLatestReport;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemCustomerReport;
     }
 }
 
