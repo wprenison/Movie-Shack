@@ -254,9 +254,9 @@
             // 
             this.btnRentRemove.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRentRemove.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRentRemove.Location = new System.Drawing.Point(250, 152);
+            this.btnRentRemove.Location = new System.Drawing.Point(321, 121);
             this.btnRentRemove.Name = "btnRentRemove";
-            this.btnRentRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRentRemove.Size = new System.Drawing.Size(75, 27);
             this.btnRentRemove.TabIndex = 8;
             this.btnRentRemove.Text = "Remove";
             this.btnRentRemove.UseVisualStyleBackColor = true;
@@ -266,9 +266,9 @@
             // 
             this.btnRentMovieAdd.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRentMovieAdd.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRentMovieAdd.Location = new System.Drawing.Point(169, 152);
+            this.btnRentMovieAdd.Location = new System.Drawing.Point(240, 121);
             this.btnRentMovieAdd.Name = "btnRentMovieAdd";
-            this.btnRentMovieAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnRentMovieAdd.Size = new System.Drawing.Size(75, 27);
             this.btnRentMovieAdd.TabIndex = 6;
             this.btnRentMovieAdd.Text = "Add";
             this.btnRentMovieAdd.UseVisualStyleBackColor = true;
@@ -985,14 +985,14 @@
             // mnuItemHelpFiles
             // 
             this.mnuItemHelpFiles.Name = "mnuItemHelpFiles";
-            this.mnuItemHelpFiles.Size = new System.Drawing.Size(152, 26);
+            this.mnuItemHelpFiles.Size = new System.Drawing.Size(136, 26);
             this.mnuItemHelpFiles.Text = "Help Files";
             this.mnuItemHelpFiles.Click += new System.EventHandler(this.mnuItemHelpFiles_Click);
             // 
             // mnuItemAbout
             // 
             this.mnuItemAbout.Name = "mnuItemAbout";
-            this.mnuItemAbout.Size = new System.Drawing.Size(152, 26);
+            this.mnuItemAbout.Size = new System.Drawing.Size(136, 26);
             this.mnuItemAbout.Text = "About";
             this.mnuItemAbout.Click += new System.EventHandler(this.mnuItemAbout_Click);
             // 
