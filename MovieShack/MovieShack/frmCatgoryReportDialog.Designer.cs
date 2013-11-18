@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatgoryReportDialog));
             this.lblCategoryReportDialog = new System.Windows.Forms.Label();
             this.lblCatgeoryReportDialogueCategory = new System.Windows.Forms.Label();
             this.cmbCategoryReportDialogCategory = new System.Windows.Forms.ComboBox();
@@ -97,6 +98,7 @@
             this.Controls.Add(this.lblCatgeoryReportDialogueCategory);
             this.Controls.Add(this.cmbCategoryReportDialogCategory);
             this.Controls.Add(this.lblCategoryReportDialog);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCatgoryReportDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Which Movie Category";

@@ -1058,6 +1058,7 @@
             this.Controls.Add(this.tctrlMovieShack);
             this.Controls.Add(this.mnuStripMovieShack);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMovieShack";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Shack";
