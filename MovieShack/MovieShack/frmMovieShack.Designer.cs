@@ -985,14 +985,15 @@
             // mnuItemHelpFiles
             // 
             this.mnuItemHelpFiles.Name = "mnuItemHelpFiles";
-            this.mnuItemHelpFiles.Size = new System.Drawing.Size(136, 26);
-            this.mnuItemHelpFiles.Text = "Help Files";
+            this.mnuItemHelpFiles.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.mnuItemHelpFiles.Size = new System.Drawing.Size(152, 26);
+            this.mnuItemHelpFiles.Text = "Help";
             this.mnuItemHelpFiles.Click += new System.EventHandler(this.mnuItemHelpFiles_Click);
             // 
             // mnuItemAbout
             // 
             this.mnuItemAbout.Name = "mnuItemAbout";
-            this.mnuItemAbout.Size = new System.Drawing.Size(136, 26);
+            this.mnuItemAbout.Size = new System.Drawing.Size(152, 26);
             this.mnuItemAbout.Text = "About";
             this.mnuItemAbout.Click += new System.EventHandler(this.mnuItemAbout_Click);
             // 

@@ -444,6 +444,7 @@ namespace MovieShack
 
             //Opens the readme file for version
             Process.Start("READ ME.txt");
+            Process.Start("Movie Shack User Manual.docx");
 
         }
 
